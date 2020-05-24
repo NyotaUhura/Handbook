@@ -37,5 +37,21 @@ namespace AdminApp
         {
             Close();
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
+            switch (res)
+            {
+                case DialogResult.Cancel:
+                    e.Cancel = true;
+                    break;
+                case DialogResult.Yes:
+                    directory.Save();
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+        }
     }
 }
