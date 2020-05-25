@@ -47,7 +47,13 @@ namespace ApplicantsGuide.Models
                         Places = 2 * j + 80
                     });
                 }
-                Universities.Add(new University(noImage, i, $"University{i}", $"Kharkiv, Naukova street, {i}", spetialities));
+                Universities.Add(new University 
+                { 
+                    Image = noImage,
+                    Name = $"University{i}", 
+                    Adress = $"Kharkiv, Naukova street, {i}", 
+                    Spetialities = spetialities 
+                });
             }
             Applicants.Clear();
             // Абитуриенты.

@@ -7,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace ApplicantsGuide.Models
 {
-    // Университет – это идентификатор + название + 
+    // Университет – это название + 
     // изображение + адрес + коллекция специальностей.
     [Serializable]
     public class University
     {
-        public University(Bitmap image, int id, string name, string adress, List<Spetiality> spetialities)
-        {
-            Image = image;
-            Id = id;
-            Name = name;
-            Adress = adress;
-            Spetialities = spetialities;
-        }
-        public int Id { set; get; }
-        public Bitmap Image { set; get; }
-        public string Name { set; get; }
+        //public University(Bitmap image, string name, string adress, List<Spetiality> spetialities)
+        //{
+        //    Image = image;
+        //    Name = name;
+        //    Adress = adress;
+        //    Spetialities = spetialities;
+        //}
+
         public string Adress { set; get; }
+        public Image Image { set; get; }
+        public string Name { set; get; }
         public List<Spetiality> Spetialities { get; set; }
     }
 }

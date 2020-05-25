@@ -22,7 +22,6 @@ namespace AdminApp
             universityBindingSource.DataSource = directory.Universities;
         }
 
-
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             directory.Load();
@@ -58,6 +57,15 @@ namespace AdminApp
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var auf = new AddUniversityForm();
+            if (auf.ShowDialog() == DialogResult.OK)
+            {
+                directory.Universities.Add(auf.University);
+            }
         }
     }
 }
