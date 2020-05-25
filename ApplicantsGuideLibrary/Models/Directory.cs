@@ -1,6 +1,8 @@
 ﻿using ApplicantsGuide.DAL;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -24,7 +26,8 @@ namespace ApplicantsGuide.Models
         //Заполнение тестовых данных.
         public void FillTestData(int n)
         {
-            //Universities.Clear();
+            Universities.Clear();
+            var noImage = new Bitmap(Path.GetFullPath("empty.png"));
             // Университеты.
             Universities = new List<University>();
             for (int i = 0; i < n - 5; i++)
@@ -44,9 +47,9 @@ namespace ApplicantsGuide.Models
                         Places = 2 * j + 80
                     });
                 }
-                Universities.Add(new University(i, $"University{i}", $"Kharkiv, Naukova street, {i}", spetialities));
+                Universities.Add(new University(noImage, i, $"University{i}", $"Kharkiv, Naukova street, {i}", spetialities));
             }
-            //Applicants.Clear();
+            Applicants.Clear();
             // Абитуриенты.
             Applicants = new List<Applicant>();
             for (int i = 0; i < n; i++)

@@ -11,14 +11,15 @@ using System.Windows.Forms;
 
 namespace AdminApp
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         Directory directory;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             directory = new Directory();
             directory.FillTestData(100);
+            universityBindingSource.DataSource = directory.Universities;
         }
 
 
@@ -52,6 +53,11 @@ namespace AdminApp
                 case DialogResult.No:
                     break;
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
