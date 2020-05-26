@@ -12,16 +12,8 @@ namespace ApplicantsGuide.Models
     [Serializable]
     public class University
     {
-        //public University(Bitmap image, string name, string adress, List<Spetiality> spetialities)
-        //{
-        //    Image = image;
-        //    Name = name;
-        //    Adress = adress;
-        //    Spetialities = spetialities;
-        //}
-
         public string Adress { set; get; }
-        public Image Image { set; get; }
+        //public Image Image { set; get; }
         public string Name { set; get; }
         public List<Spetiality> Spetialities { get; set; }
     }

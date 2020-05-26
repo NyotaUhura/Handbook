@@ -27,7 +27,7 @@ namespace ApplicantsGuide.Models
         public void FillTestData(int n)
         {
             Universities.Clear();
-            var noImage = new Bitmap(Path.GetFullPath("empty.png"));
+            //var noImage = new Bitmap(Path.GetFullPath("empty.png"));
             // Университеты.
             Universities = new List<University>();
             for (int i = 0; i < n - 5; i++)
@@ -49,7 +49,7 @@ namespace ApplicantsGuide.Models
                 }
                 Universities.Add(new University 
                 { 
-                    Image = noImage,
+                    //Image = noImage,
                     Name = $"University{i}", 
                     Adress = $"Kharkiv, Naukova street, {i}", 
                     Spetialities = spetialities 

@@ -145,6 +145,7 @@
             this.addSpetialitiesButton.TabIndex = 10;
             this.addSpetialitiesButton.Text = "Add spetialities";
             this.addSpetialitiesButton.UseVisualStyleBackColor = false;
+            this.addSpetialitiesButton.Click += new System.EventHandler(this.addSpetialitiesButton_Click);
             // 
             // spetialitiesBox
             // 
@@ -156,6 +157,7 @@
             this.spetialitiesBox.Name = "spetialitiesBox";
             this.spetialitiesBox.Size = new System.Drawing.Size(248, 164);
             this.spetialitiesBox.TabIndex = 11;
+            this.spetialitiesBox.SelectedIndexChanged += new System.EventHandler(this.spetialitiesBox_SelectedIndexChanged);
             // 
             // AddUniversityForm
             // 

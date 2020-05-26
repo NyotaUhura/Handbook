@@ -12,22 +12,12 @@ namespace ApplicantsGuide.Models
     [Serializable]
     public class Spetiality
     {
-        //public Spetiality(string name, int price, double contest, int stateFundedPlaces, int dayPlaces, int correspondencePlaces)
-        //{
-        //    Name = name;
-        //    Price = price;
-        //    Contest = contest;
-        //    StateFundedPlaces = stateFundedPlaces;
-        //    DayPlaces = dayPlaces;
-        //    СorrespondencePlaces = correspondencePlaces;
-        //    Places = dayPlaces + correspondencePlaces;
-        //}
         public string Name { set; get; }
         public decimal Price { set; get; }
-        public double Contest { set; get; }
-        public int StateFundedPlaces { set; get; }
-        public int DayPlaces { set; get; }
-        public int СorrespondencePlaces { set; get; }
-        public int Places { set; get; }
+        public decimal Contest { set; get; }
+        public decimal StateFundedPlaces { set; get; }
+        public decimal DayPlaces { set; get; }
+        public decimal СorrespondencePlaces { set; get; }
+        public decimal Places { set; get; }
     }
 }

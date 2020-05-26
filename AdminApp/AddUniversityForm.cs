@@ -24,7 +24,6 @@ namespace AdminApp
 
         }
 
-
         private void Name_Click(object sender, EventArgs e)
         {
 
@@ -39,11 +38,24 @@ namespace AdminApp
         {
             University = new University
             {
-                //+специальности
+                //Spetialities = ,
                 Adress = adressBox.Text,
-                Image = pictureBox1.Image,
                 Name = nameBox.Text
             };
+        }
+
+        private void addSpetialitiesButton_Click(object sender, EventArgs e)
+        {
+            var asf = new AddSpetialityForm();
+            if (asf.ShowDialog() == DialogResult.OK)
+            {
+                University.Spetialities.Add(asf.Spetiality);
+            }
+        }
+
+        private void spetialitiesBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

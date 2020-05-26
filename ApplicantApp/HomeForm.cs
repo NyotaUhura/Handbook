@@ -9,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdminApp
+namespace ApplicantApp
 {
-    public partial class MainForm : Form
+    public partial class HomeForm : Form
     {
         Directory directory;
-        public MainForm()
+        public HomeForm()
         {
             InitializeComponent();
             directory = new Directory();
@@ -27,7 +27,6 @@ namespace AdminApp
             directory.Load();
         }
 
-
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             directory.Save();
@@ -38,7 +37,7 @@ namespace AdminApp
             Close();
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             var res = MessageBox.Show("Save data before exit?", "", MessageBoxButtons.YesNoCancel);
             switch (res)
@@ -52,28 +51,6 @@ namespace AdminApp
                 case DialogResult.No:
                     break;
             }
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void newToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var auf = new AddUniversityForm();
-            if (auf.ShowDialog() == DialogResult.OK)
-            {
-                directory.Universities.Add(auf.University);
-            }
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var toDel = universitiyList.SelectedItem as University;
-            MessageBox.Show($"Delete {toDel.Name} ?");
-            directory.Universities.Remove(toDel);
-            universityBindingSource.ResetBindings(false);
         }
     }
 }
