@@ -72,7 +72,5 @@ namespace ApplicantsGuide.Models
             {
                 new Dao(this).Load();
             }
-
-
     }
 }

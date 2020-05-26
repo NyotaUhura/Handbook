@@ -46,6 +46,7 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Applicant.cs" />
     <Compile Include="Models\Directory.cs" />
+    <Compile Include="Models\FavoritesList.cs" />
     <Compile Include="Models\Spetiality.cs" />
     <Compile Include="Models\University.cs" />
     <Compile Include="Models\User.cs" />

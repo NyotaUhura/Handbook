@@ -14,6 +14,7 @@ namespace ApplicantApp
     public partial class HomeForm : Form
     {
         Directory directory;
+        //FavoritesList favoritesList;
         public HomeForm()
         {
             InitializeComponent();
@@ -51,6 +52,23 @@ namespace ApplicantApp
                 case DialogResult.No:
                     break;
             }
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var uf = new UniversitiesForm();
+            if (uf.ShowDialog() == DialogResult.OK)
+            {
+                //directory.FavoritesList.Favorites.Add(uf.University);
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var toDel = favoriteList.SelectedItem as University;
+            MessageBox.Show($"Delete {toDel.Name} ?");
+            //directory.FavoritesList.Universities.Remove(toDel);
+            universityBindingSource.ResetBindings(false);
         }
     }
 }
