@@ -16,12 +16,11 @@ namespace AdminApp
     {
 
         public Spetiality currentSpetiality { set; get; }
-        List<Spetiality> spetialities;
         
-        public AddSpetialityForm(University currentUniversity)
+        
+        public AddSpetialityForm()
         {
             InitializeComponent();
-            //spetialities = currentUniversity.Spetialities;
         }
 
         private void AddSpetialityForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,14 +31,14 @@ namespace AdminApp
         private void okButton_Click(object sender, EventArgs e)
         {
             currentSpetiality = new Spetiality
-            {
-                Name = nameBox.Text,
-                Price = priceBox.Value,
-                Contest = contestBox.Value,
-                StateFundedPlaces = stateFundedPlacesBox.Value,
-                DayPlaces = dayPlacesBox.Value,
-                СorrespondencePlaces = correspondancePlacesBox.Value
-            };
+            (
+                nameBox.Text,
+                priceBox.Value,
+                contestBox.Value,
+                stateFundedPlacesBox.Value,
+                dayPlacesBox.Value,
+                correspondancePlacesBox.Value
+            );
         }
     }
 }

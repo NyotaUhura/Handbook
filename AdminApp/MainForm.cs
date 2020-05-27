@@ -20,6 +20,7 @@ namespace AdminApp
             InitializeComponent();
             directory = new Directory();
             directory.FillTestData(100);
+
             universityBindingSource.DataSource = directory.Universities;
         }
 
@@ -66,6 +67,7 @@ namespace AdminApp
             if (auf.ShowDialog() == DialogResult.OK)
             {
                 directory.Universities.Add(auf.CurrentUniversity);
+                universityBindingSource.ResetBindings(false);
             }
         }
 

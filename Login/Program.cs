@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicantApp
+namespace Login
 {
     static class Program
     {
@@ -16,9 +16,7 @@ namespace ApplicantApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm(
-                new ApplicantsGuide.Models.Applicant("name000", "123")
-                )) ;
+            Application.Run(new loginForm());
         }
     }
 }

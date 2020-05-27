@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ApplicantsGuide.Models
 {
     [Serializable]
-    abstract class User
+    public abstract class User
     {
         public string Name { set; get; }
         public string Password { set; get; }

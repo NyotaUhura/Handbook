@@ -8,10 +8,13 @@ namespace ApplicantsGuide.Models
 {
     // Абитуриент - это имя + пароль.
     [Serializable]
-    public class Applicant
+    public class Applicant :User
     {
-        public string Name { set; get; }
-        public string Password { set; get; }
         public List<University> Favorites = new List<University>();
+        public Applicant(string name, string password)
+        {
+            Name = name;
+            Password = password;
+        }
     }
 }

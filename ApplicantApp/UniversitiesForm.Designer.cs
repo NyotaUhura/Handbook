@@ -79,25 +79,29 @@
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.okButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.okButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.okButton.FlatAppearance.BorderSize = 0;
             this.okButton.Location = new System.Drawing.Point(32, 463);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(82, 28);
             this.okButton.TabIndex = 3;
             this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(360, 463);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(83, 28);
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             // 
             // adressDataGridViewTextBoxColumn
             // 
@@ -125,6 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(492, 503);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);

@@ -11,13 +11,12 @@ using System.Threading.Tasks;
 
 namespace ApplicantsGuide.Models
 {
-    // Справочник – это коллекция университетов + коллекция абитуриентов.
+    // Справочник – это коллекция университетов + коллекция абитуриентов + администратор.
     [Serializable]
     public class Directory
     {
-        //Список университетов.
+        public Admin Admin{ set; get; }
         public List<University> Universities { private set; get; }
-        //Список абитуриентов.
         public List<Applicant> Applicants { private set; get; }
         public Directory()
         {
@@ -39,31 +38,33 @@ namespace ApplicantsGuide.Models
                 for (int j = 0; j < 5; j++)
                 {
                     spetialities.Add(new Spetiality
-                    {
-                        Name = $"Spetiality{j}",
-                        Price = j * 1000 + 10000,
-                        Contest = 170 + j,
-                        StateFundedPlaces = 30 + j,
-                        DayPlaces = 80 + j,
-                        СorrespondencePlaces = j,
-                        Places = 2 * j + 80
-                    });
+                    (
+                        $"Spetiality{j}",
+                        j * 1000 + 10000,
+                        170 + j,
+                        30 + j,
+                        80 + j,
+                        j
+                    ));
                 }
-                Universities.Add(new University 
-                { 
+                Universities.Add(new University
+                (
                     //Image = noImage,
-                    Name = $"University{i}", 
-                    Adress = $"Kharkiv, Naukova street, {i}", 
-                    Spetialities = spetialities 
-                });
+                    $"Kharkiv, Naukova street, {i}",
+                    $"University{i}",
+                    spetialities
+                ));
             }
             Applicants.Clear();
             // Абитуриенты.
             Applicants = new List<Applicant>();
             for (int i = 0; i < n; i++)
             {
-                Applicants.Add(new Applicant { Name = $"Applicant{i}", Password = "123" });
+                Applicants.Add(new Applicant ( $"Applicant{i}", "123" ));
             }
+
+            ////Админ.
+            
         }
             //Сохранение и загрузка данных.
             public void Save()

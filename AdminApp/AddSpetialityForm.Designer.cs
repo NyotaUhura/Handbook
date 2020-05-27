@@ -102,13 +102,14 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(427, 331);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(94, 30);
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             // 
             // correspondencePlaces
             // 
@@ -134,6 +135,11 @@
             this.priceBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.priceBox.Location = new System.Drawing.Point(237, 71);
+            this.priceBox.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(304, 22);
             this.priceBox.TabIndex = 8;
@@ -143,6 +149,11 @@
             this.contestBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contestBox.Location = new System.Drawing.Point(237, 115);
+            this.contestBox.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.contestBox.Name = "contestBox";
             this.contestBox.Size = new System.Drawing.Size(304, 22);
             this.contestBox.TabIndex = 9;
@@ -152,6 +163,11 @@
             this.stateFundedPlacesBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stateFundedPlacesBox.Location = new System.Drawing.Point(237, 160);
+            this.stateFundedPlacesBox.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.stateFundedPlacesBox.Name = "stateFundedPlacesBox";
             this.stateFundedPlacesBox.Size = new System.Drawing.Size(304, 22);
             this.stateFundedPlacesBox.TabIndex = 10;
@@ -161,6 +177,11 @@
             this.dayPlacesBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dayPlacesBox.Location = new System.Drawing.Point(237, 208);
+            this.dayPlacesBox.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.dayPlacesBox.Name = "dayPlacesBox";
             this.dayPlacesBox.Size = new System.Drawing.Size(304, 22);
             this.dayPlacesBox.TabIndex = 11;
@@ -170,6 +191,11 @@
             this.correspondancePlacesBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.correspondancePlacesBox.Location = new System.Drawing.Point(237, 252);
+            this.correspondancePlacesBox.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.correspondancePlacesBox.Name = "correspondancePlacesBox";
             this.correspondancePlacesBox.Size = new System.Drawing.Size(304, 22);
             this.correspondancePlacesBox.TabIndex = 12;
@@ -177,19 +203,21 @@
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.okButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(51, 331);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(94, 30);
             this.okButton.TabIndex = 13;
             this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // AddSpetialityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(582, 373);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.correspondancePlacesBox);

@@ -19,6 +19,12 @@ namespace AdminApp
         {
             InitializeComponent();
 
+            CurrentUniversity = new University
+            (
+                adressBox.Text,
+                nameBox.Text
+            );
+
             spetialityBindingSource.DataSource = CurrentUniversity.Spetialities;
         }
 
@@ -39,17 +45,12 @@ namespace AdminApp
 
         private void AddUniversityForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            CurrentUniversity = new University
-            {
-                Adress = adressBox.Text,
-                Name = nameBox.Text,
-                
-            };
+
         }
 
         private void addSpetialitiesButton_Click(object sender, EventArgs e)
         {
-            var asf = new AddSpetialityForm(CurrentUniversity);
+            var asf = new AddSpetialityForm();
             if (asf.ShowDialog() == DialogResult.OK)
             {
                 CurrentUniversity.Spetialities.Add(asf.currentSpetiality);

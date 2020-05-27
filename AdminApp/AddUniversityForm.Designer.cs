@@ -43,6 +43,7 @@
             this.spetialitiesGridView = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spetialityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.image = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialitiesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).BeginInit();
@@ -92,34 +93,37 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 179);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 222);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 207);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.okButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.okButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.okButton.Location = new System.Drawing.Point(38, 458);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(101, 28);
             this.okButton.TabIndex = 6;
             this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.UseVisualStyleBackColor = false;
             // 
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(435, 458);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(101, 28);
             this.cancelButton.TabIndex = 7;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             // 
             // spetialities
             // 
@@ -160,6 +164,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.spetialitiesGridView.AutoGenerateColumns = false;
+            this.spetialitiesGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.spetialitiesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.spetialitiesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn});
@@ -187,11 +192,23 @@
             // 
             this.spetialityBindingSource.DataSource = typeof(ApplicantsGuide.Models.Spetiality);
             // 
+            // image
+            // 
+            this.image.AutoSize = true;
+            this.image.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.image.Location = new System.Drawing.Point(38, 181);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(51, 17);
+            this.image.TabIndex = 12;
+            this.image.Text = "Image";
+            // 
             // AddUniversityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(582, 508);
+            this.Controls.Add(this.image);
             this.Controls.Add(this.spetialitiesGridView);
             this.Controls.Add(this.addSpetialitiesButton);
             this.Controls.Add(this.label1);
@@ -232,5 +249,6 @@
         private System.Windows.Forms.DataGridView spetialitiesGridView;
         private System.Windows.Forms.BindingSource spetialityBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label image;
     }
 }
