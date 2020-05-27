@@ -12,5 +12,6 @@ namespace ApplicantsGuide.Models
     {
         public string Name { set; get; }
         public string Password { set; get; }
+        public List<University> Favorites = new List<University>();
     }
 }

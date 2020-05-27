@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace AdminApp
 {
+    //Форма добавления университета в справочник абитуриента.
     public partial class AddUniversityForm : Form
     {
-        public University University { set; get; }
+        public University CurrentUniversity { set; get; }
         public AddUniversityForm()
         {
             InitializeComponent();
+
+            spetialityBindingSource.DataSource = CurrentUniversity.Spetialities;
         }
 
         private void AddUniversityForm_Load(object sender, EventArgs e)
@@ -36,20 +39,21 @@ namespace AdminApp
 
         private void AddUniversityForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            University = new University
+            CurrentUniversity = new University
             {
-                //Spetialities = ,
                 Adress = adressBox.Text,
-                Name = nameBox.Text
+                Name = nameBox.Text,
+                
             };
         }
 
         private void addSpetialitiesButton_Click(object sender, EventArgs e)
         {
-            var asf = new AddSpetialityForm();
+            var asf = new AddSpetialityForm(CurrentUniversity);
             if (asf.ShowDialog() == DialogResult.OK)
             {
-                University.Spetialities.Add(asf.Spetiality);
+                CurrentUniversity.Spetialities.Add(asf.currentSpetiality);
+                spetialityBindingSource.ResetBindings(false);
             }
         }
 

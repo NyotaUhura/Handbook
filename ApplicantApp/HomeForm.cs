@@ -11,16 +11,19 @@ using System.Windows.Forms;
 
 namespace ApplicantApp
 {
+    //Главное окно студента, которое отбражает список избранных.
     public partial class HomeForm : Form
     {
         Directory directory;
-        //FavoritesList favoritesList;
-        public HomeForm()
+        Applicant CurrentApplicant;
+        public HomeForm(Applicant applicant)
         {
             InitializeComponent();
             directory = new Directory();
             directory.FillTestData(100);
-            universityBindingSource.DataSource = directory.Universities;
+
+            this.CurrentApplicant = applicant;
+            universityBindingSource.DataSource = applicant.Favorites;
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,19 +59,35 @@ namespace ApplicantApp
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var uf = new UniversitiesForm();
+            var uf = new UniversitiesForm(CurrentApplicant.Favorites);
             if (uf.ShowDialog() == DialogResult.OK)
             {
-                //directory.FavoritesList.Favorites.Add(uf.University);
+                CurrentApplicant.Favorites.Add(uf.currentUniversity);
+                universityBindingSource.ResetBindings(false);
             }
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var toDel = favoriteList.SelectedItem as University;
-            MessageBox.Show($"Delete {toDel.Name} ?");
-            //directory.FavoritesList.Universities.Remove(toDel);
-            universityBindingSource.ResetBindings(false);
+            if (this.favoriteGridView.SelectedRows.Count > 0)
+            {
+                var toDel = favoriteGridView.CurrentRow;
+                var res = MessageBox.Show($"Delete university?", "Сonfirmation", MessageBoxButtons.YesNo);
+                switch (res)
+                {
+                    case DialogResult.Yes:
+                        favoriteGridView.Rows.RemoveAt(this.favoriteGridView.SelectedRows[0].Index);
+                        universityBindingSource.ResetBindings(false);
+                        break;
+                    case DialogResult.No:
+                        break;
+                }
+            }
+        }
+
+        private void favoriteList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

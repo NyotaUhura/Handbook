@@ -15,7 +15,9 @@ namespace ApplicantsGuide.Models
     [Serializable]
     public class Directory
     {
+        //Список университетов.
         public List<University> Universities { private set; get; }
+        //Список абитуриентов.
         public List<Applicant> Applicants { private set; get; }
         public Directory()
         {

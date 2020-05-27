@@ -11,17 +11,27 @@ using System.Windows.Forms;
 
 namespace AdminApp
 {
+    //Форма добавления специальности выбраному университету.
     public partial class AddSpetialityForm : Form
     {
-        public Spetiality Spetiality { set; get; }
-        public AddSpetialityForm()
+
+        public Spetiality currentSpetiality { set; get; }
+        List<Spetiality> spetialities;
+        
+        public AddSpetialityForm(University currentUniversity)
         {
             InitializeComponent();
+            //spetialities = currentUniversity.Spetialities;
         }
 
         private void AddSpetialityForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Spetiality = new Spetiality
+            
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            currentSpetiality = new Spetiality
             {
                 Name = nameBox.Text,
                 Price = priceBox.Value,

@@ -16,7 +16,9 @@ namespace ApplicantApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm());
+            Application.Run(new HomeForm(
+                new ApplicantsGuide.Models.Applicant()
+                )) ;
         }
     }
 }

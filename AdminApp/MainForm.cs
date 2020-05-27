@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace AdminApp
 {
+    //Главное окно администратора, которое отображает список всех университетов.
     public partial class MainForm : Form
     {
         Directory directory;
@@ -64,16 +65,24 @@ namespace AdminApp
             var auf = new AddUniversityForm();
             if (auf.ShowDialog() == DialogResult.OK)
             {
-                directory.Universities.Add(auf.University);
+                directory.Universities.Add(auf.CurrentUniversity);
             }
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var toDel = universitiyList.SelectedItem as University;
-            MessageBox.Show($"Delete {toDel.Name} ?");
-            directory.Universities.Remove(toDel);
-            universityBindingSource.ResetBindings(false);
+            var res = MessageBox.Show($"Delete {toDel.Name} ?", "Сonfirmation", MessageBoxButtons.YesNo);
+            switch (res)
+            {
+                case DialogResult.Yes:
+                    directory.Universities.Remove(toDel);
+                    universityBindingSource.ResetBindings(false);
+                    break;
+                case DialogResult.No:
+                    break;
+                
+            }
         }
     }
 }

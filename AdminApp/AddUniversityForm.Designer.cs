@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.Label();
             this.adress = new System.Windows.Forms.Label();
@@ -39,8 +40,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.addSpetialitiesButton = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.spetialitiesBox = new System.Windows.Forms.ListBox();
+            this.spetialitiesGridView = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.spetialityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spetialitiesGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nameBox
@@ -49,7 +54,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nameBox.Location = new System.Drawing.Point(116, 38);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(384, 22);
+            this.nameBox.Size = new System.Drawing.Size(434, 22);
             this.nameBox.TabIndex = 0;
             // 
             // name
@@ -80,18 +85,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.adressBox.Location = new System.Drawing.Point(116, 83);
             this.adressBox.Name = "adressBox";
-            this.adressBox.Size = new System.Drawing.Size(384, 22);
+            this.adressBox.Size = new System.Drawing.Size(434, 22);
             this.adressBox.TabIndex = 2;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(312, 129);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 179);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 217);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 250);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -99,7 +103,7 @@
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(38, 370);
+            this.okButton.Location = new System.Drawing.Point(38, 458);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(101, 28);
             this.okButton.TabIndex = 6;
@@ -110,7 +114,7 @@
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(399, 370);
+            this.cancelButton.Location = new System.Drawing.Point(435, 458);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(101, 28);
             this.cancelButton.TabIndex = 7;
@@ -138,7 +142,7 @@
             // addSpetialitiesButton
             // 
             this.addSpetialitiesButton.BackColor = System.Drawing.SystemColors.Control;
-            this.addSpetialitiesButton.Location = new System.Drawing.Point(151, 129);
+            this.addSpetialitiesButton.Location = new System.Drawing.Point(129, 129);
             this.addSpetialitiesButton.Name = "addSpetialitiesButton";
             this.addSpetialitiesButton.Padding = new System.Windows.Forms.Padding(2);
             this.addSpetialitiesButton.Size = new System.Drawing.Size(135, 28);
@@ -147,24 +151,48 @@
             this.addSpetialitiesButton.UseVisualStyleBackColor = false;
             this.addSpetialitiesButton.Click += new System.EventHandler(this.addSpetialitiesButton_Click);
             // 
-            // spetialitiesBox
+            // spetialitiesGridView
             // 
-            this.spetialitiesBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.spetialitiesBox.FormattingEnabled = true;
-            this.spetialitiesBox.ItemHeight = 16;
-            this.spetialitiesBox.Location = new System.Drawing.Point(38, 182);
-            this.spetialitiesBox.Name = "spetialitiesBox";
-            this.spetialitiesBox.Size = new System.Drawing.Size(248, 164);
-            this.spetialitiesBox.TabIndex = 11;
-            this.spetialitiesBox.SelectedIndexChanged += new System.EventHandler(this.spetialitiesBox_SelectedIndexChanged);
+            this.spetialitiesGridView.AllowUserToAddRows = false;
+            this.spetialitiesGridView.AllowUserToDeleteRows = false;
+            this.spetialitiesGridView.AllowUserToOrderColumns = true;
+            this.spetialitiesGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.spetialitiesGridView.AutoGenerateColumns = false;
+            this.spetialitiesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.spetialitiesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn});
+            this.spetialitiesGridView.DataSource = this.spetialityBindingSource;
+            this.spetialitiesGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.spetialitiesGridView.Location = new System.Drawing.Point(300, 129);
+            this.spetialitiesGridView.MultiSelect = false;
+            this.spetialitiesGridView.Name = "spetialitiesGridView";
+            this.spetialitiesGridView.ReadOnly = true;
+            this.spetialitiesGridView.RowHeadersWidth = 51;
+            this.spetialitiesGridView.RowTemplate.Height = 24;
+            this.spetialitiesGridView.Size = new System.Drawing.Size(250, 311);
+            this.spetialitiesGridView.TabIndex = 11;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // spetialityBindingSource
+            // 
+            this.spetialityBindingSource.DataSource = typeof(ApplicantsGuide.Models.Spetiality);
             // 
             // AddUniversityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 420);
-            this.Controls.Add(this.spetialitiesBox);
+            this.ClientSize = new System.Drawing.Size(582, 508);
+            this.Controls.Add(this.spetialitiesGridView);
             this.Controls.Add(this.addSpetialitiesButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.spetialities);
@@ -175,11 +203,14 @@
             this.Controls.Add(this.adressBox);
             this.Controls.Add(this.name);
             this.Controls.Add(this.nameBox);
+            this.MinimumSize = new System.Drawing.Size(600, 555);
             this.Name = "AddUniversityForm";
             this.Text = "AddUniversityForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddUniversityForm_FormClosing);
             this.Load += new System.EventHandler(this.AddUniversityForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spetialitiesGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,6 +229,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addSpetialitiesButton;
         private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.ListBox spetialitiesBox;
+        private System.Windows.Forms.DataGridView spetialitiesGridView;
+        private System.Windows.Forms.BindingSource spetialityBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

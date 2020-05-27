@@ -40,9 +40,10 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.universitiyList = new System.Windows.Forms.ListBox();
             this.universityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.universities = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.universityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(-1, -1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(196, 23);
+            this.menuStrip1.Size = new System.Drawing.Size(346, 23);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -113,20 +114,20 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -138,6 +139,12 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 19);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // gitHubToolStripMenuItem
+            // 
+            this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gitHubToolStripMenuItem.Text = "GitHub";
+            // 
             // universitiyList
             // 
             this.universitiyList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -147,26 +154,31 @@
             this.universitiyList.DisplayMember = "Name";
             this.universitiyList.FormattingEnabled = true;
             this.universitiyList.ItemHeight = 16;
-            this.universitiyList.Location = new System.Drawing.Point(12, 64);
+            this.universitiyList.Location = new System.Drawing.Point(12, 96);
             this.universitiyList.Name = "universitiyList";
-            this.universitiyList.Size = new System.Drawing.Size(405, 388);
+            this.universitiyList.Size = new System.Drawing.Size(405, 356);
             this.universitiyList.TabIndex = 1;
             // 
             // universityBindingSource
             // 
             this.universityBindingSource.DataSource = typeof(ApplicantsGuide.Models.University);
             // 
-            // gitHubToolStripMenuItem
+            // universities
             // 
-            this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
-            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.gitHubToolStripMenuItem.Text = "GitHub";
+            this.universities.AutoSize = true;
+            this.universities.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.universities.Location = new System.Drawing.Point(12, 49);
+            this.universities.Name = "universities";
+            this.universities.Size = new System.Drawing.Size(150, 29);
+            this.universities.TabIndex = 2;
+            this.universities.Text = "Universities";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 473);
+            this.Controls.Add(this.universities);
             this.Controls.Add(this.universitiyList);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -199,6 +211,7 @@
         private System.Windows.Forms.ListBox universitiyList;
         private System.Windows.Forms.BindingSource universityBindingSource;
         private System.Windows.Forms.ToolStripMenuItem gitHubToolStripMenuItem;
+        private System.Windows.Forms.Label universities;
     }
 }
 
