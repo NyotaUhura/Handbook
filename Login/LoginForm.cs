@@ -1,4 +1,6 @@
-﻿using ApplicantsGuide.Models;
+﻿using AdminApp;
+using ApplicantApp;
+using ApplicantsGuide.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,24 +17,95 @@ namespace Login
 {
     public partial class loginForm : Form
     {
-        Directory directory;
+        public Directory Directory;
+        public Admin Admin;
+        //public Applicant Applicant;
+
         public loginForm()
         {
-            directory = new Directory();
+            Directory = new Directory();
+            Admin = new Admin("admin", "admin");
             if (!File.Exists("directory.bin"))
-                directory.FillTestData(100);
+                Directory.FillTestData(100);
             else
-                directory.Load();
+                Directory.Load();
             InitializeComponent();
         }
 
         private void signUp_Click(object sender, EventArgs e)
         {
             var suf = new SignUpForm();
+            if (suf.ShowDialog() == DialogResult.Yes)
+            {
+                Directory.Applicants.Add(suf.CurrentApplicant);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+
+        /////////////////////////////////////////////////////////////
+        private void SignIn_Click(object sender, EventArgs e)
+        {
+            //if (!CheckAdmin())
+            //    CheckApplicant();
+            var suf = new SignUpForm();
             if (suf.ShowDialog() == DialogResult.OK)
             {
-                //directory.Applicants.Add(suf.CurrentApplicant);
+                Directory.Applicants.Add(suf.CurrentApplicant);
             }
+        }
+
+        private bool CheckAdmin()
+        {
+            if (nameBox.Text == Admin.Name && passwordBox.Text == Admin.Password)
+            {
+                var adminApp = new AdminMainForm(Directory, Admin);
+                this.Hide();
+                adminApp.ShowDialog();
+                
+                this.Close();
+                return true;
+            }
+            return false;
+        }
+
+        private void CheckApplicant()
+        {
+            if (nameBox.Text != string.Empty && passwordBox.Text != string.Empty)
+            {
+                foreach (var applicant in Directory.Applicants)
+                {
+                    if (nameBox.Text == applicant.Name)
+                    {
+                        if (passwordBox.Text == applicant.Password)
+                        {
+                            var applicantApp = new HomeForm(Directory, applicant);
+                            this.Hide();
+                            applicantApp.ShowDialog();
+
+                            this.Close();
+                            return;
+                        }
+                    }
+                    else MessageBox.Show("Wrong password. Try it again..");
+                }
+            }
+            MessageBox.Show("All fields are required.");
+        }
+
+        private void loginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Directory.Save();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+
+            if (!CheckAdmin())
+                CheckApplicant();
         }
     }
 }

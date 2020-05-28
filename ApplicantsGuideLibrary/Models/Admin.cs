@@ -8,5 +8,8 @@ namespace ApplicantsGuide.Models
 {
     // Администратор - это имя + пароль.
     [Serializable]
-    public class Admin: User{}
+    public class Admin : User
+    {
+        public Admin(string name, string password) : base(name, password) { }
+    }
 }

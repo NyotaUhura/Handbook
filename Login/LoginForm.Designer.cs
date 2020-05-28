@@ -32,8 +32,8 @@
             this.name = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
             this.line = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.passwordBox = new System.Windows.Forms.TextBox();
             this.signUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,21 +47,21 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.name.Location = new System.Drawing.Point(86, 55);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(49, 17);
+            this.name.Size = new System.Drawing.Size(53, 20);
             this.name.TabIndex = 1;
             this.name.Text = "Name";
             // 
             // password
             // 
             this.password.AutoSize = true;
-            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.password.Location = new System.Drawing.Point(58, 101);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(77, 17);
+            this.password.Size = new System.Drawing.Size(83, 20);
             this.password.TabIndex = 2;
             this.password.Text = "Password";
             // 
@@ -75,28 +75,29 @@
             this.line.TabIndex = 3;
             this.line.Text = "________________or__________________";
             // 
-            // button1
+            // nextButton
             // 
-            this.button1.BackColor = System.Drawing.Color.SlateGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button1.Location = new System.Drawing.Point(89, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 70);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = false;
+            this.nextButton.BackColor = System.Drawing.Color.SlateGray;
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nextButton.ForeColor = System.Drawing.Color.AliceBlue;
+            this.nextButton.Location = new System.Drawing.Point(89, 158);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(221, 70);
+            this.nextButton.TabIndex = 5;
+            this.nextButton.Text = "Next";
+            this.nextButton.UseVisualStyleBackColor = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
-            // textBox1
+            // passwordBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
-            this.textBox1.TabIndex = 6;
+            this.passwordBox.Location = new System.Drawing.Point(158, 101);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(165, 22);
+            this.passwordBox.TabIndex = 6;
             // 
             // signUp
             // 
-            this.signUp.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.signUp.BackColor = System.Drawing.SystemColors.Window;
             this.signUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.signUp.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.signUp.Location = new System.Drawing.Point(118, 263);
@@ -114,8 +115,8 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(402, 333);
             this.Controls.Add(this.signUp);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.nextButton);
             this.Controls.Add(this.line);
             this.Controls.Add(this.password);
             this.Controls.Add(this.name);
@@ -124,6 +125,7 @@
             this.MinimumSize = new System.Drawing.Size(420, 380);
             this.Name = "loginForm";
             this.Text = "LoginForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loginForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,8 +137,8 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label password;
         private System.Windows.Forms.Label line;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Button signUp;
     }
 }

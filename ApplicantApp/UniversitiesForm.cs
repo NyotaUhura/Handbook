@@ -29,13 +29,25 @@ namespace ApplicantApp
 
         private void UniversitiesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            var un = (University)universityBindingSource.Current;
+            //foreach (University university in favorites)
+            //{
+            //    if (currentUniversity.Name == university.Name)
+            //        return;
+            //    else
+            //    {
+                    currentUniversity = un;
+            //    }
+            //}
+
+
+
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            var un = (University)universityBindingSource.Current;
-            currentUniversity = un;
+            Close();
+            
         }
 
         private void universitiesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

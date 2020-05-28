@@ -21,14 +21,34 @@ namespace Login
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            if (passwordBox.Text == passwordBox2.Text)
-            {
-                CurrentApplicant = new Applicant(
-                nameBox.Text,
-                passwordBox.Text
-                );  
-            }
+            Close();
             
+        }
+
+        private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (nameBox.Text != string.Empty && passwordBox.Text != string.Empty &&
+                            passwordBox2.Text != string.Empty)
+            {
+                if (passwordBox.Text == passwordBox2.Text)
+                {
+                    CurrentApplicant = new Applicant(
+                    nameBox.Text,
+                    passwordBox.Text
+                    );
+                }
+                else
+                {
+                    MessageBox.Show("Wrong password. Try it again.");
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("All fields are required.");
+                e.Cancel = true;
+            }
+
         }
     }
 }

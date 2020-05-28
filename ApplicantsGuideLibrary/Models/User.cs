@@ -11,5 +11,10 @@ namespace ApplicantsGuide.Models
     {
         public string Name { set; get; }
         public string Password { set; get; }
+        public User(string name, string password)
+        {
+            Name = name;
+            Password = password;
+        }
     }
 }

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.universitiesGridView = new System.Windows.Forms.DataGridView();
-            this.universities = new System.Windows.Forms.Label();
-            this.okButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.universityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.universities = new System.Windows.Forms.Label();
+            this.okButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.universitiesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.universityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,28 @@
             this.universitiesGridView.TabIndex = 0;
             this.universitiesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.universitiesGridView_CellContentClick);
             this.universitiesGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.universitiesGridView_CellMouseDoubleClick);
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.adressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // universityBindingSource
+            // 
+            this.universityBindingSource.DataSource = typeof(ApplicantsGuide.Models.University);
             // 
             // universities
             // 
@@ -102,28 +124,6 @@
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.adressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // universityBindingSource
-            // 
-            this.universityBindingSource.DataSource = typeof(ApplicantsGuide.Models.University);
             // 
             // UniversitiesForm
             // 

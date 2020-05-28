@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApplicantsGuide.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace AdminApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new AdminMainForm(
+                new Directory(), 
+                new Admin("admin", "admin")
+                ));
         }
     }
 }

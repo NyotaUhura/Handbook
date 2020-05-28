@@ -12,27 +12,29 @@ using System.Windows.Forms;
 namespace AdminApp
 {
     //Главное окно администратора, которое отображает список всех университетов.
-    public partial class MainForm : Form
+    public partial class AdminMainForm : Form
     {
-        Directory directory;
-        public MainForm()
+        public Directory Directory;
+        public Admin CurrentAdmin;
+        public AdminMainForm(Directory directory, Admin admin)
         {
+            Directory = directory;
+            CurrentAdmin = admin;
             InitializeComponent();
-            directory = new Directory();
-            directory.FillTestData(100);
 
+            Directory.FillTestData(100);
             universityBindingSource.DataSource = directory.Universities;
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            directory.Load();
+            Directory.Load();
         }
 
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            directory.Save();
+            Directory.Save();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace AdminApp
                     e.Cancel = true;
                     break;
                 case DialogResult.Yes:
-                    directory.Save();
+                    Directory.Save();
                     break;
                 case DialogResult.No:
                     break;
@@ -66,7 +68,7 @@ namespace AdminApp
             var auf = new AddUniversityForm();
             if (auf.ShowDialog() == DialogResult.OK)
             {
-                directory.Universities.Add(auf.CurrentUniversity);
+                Directory.Universities.Add(auf.CurrentUniversity);
                 universityBindingSource.ResetBindings(false);
             }
         }
@@ -78,7 +80,7 @@ namespace AdminApp
             switch (res)
             {
                 case DialogResult.Yes:
-                    directory.Universities.Remove(toDel);
+                    Directory.Universities.Remove(toDel);
                     universityBindingSource.ResetBindings(false);
                     break;
                 case DialogResult.No:

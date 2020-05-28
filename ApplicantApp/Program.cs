@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApplicantsGuide.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,8 @@ namespace ApplicantApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new HomeForm(
-                new ApplicantsGuide.Models.Applicant("name000", "123")
+                new Directory(),
+                new Applicant("applicant", "applicant")
                 )) ;
         }
     }

@@ -103,7 +103,7 @@
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.okButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.okButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.okButton.Location = new System.Drawing.Point(38, 458);
@@ -116,7 +116,7 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Location = new System.Drawing.Point(435, 458);
             this.cancelButton.Name = "cancelButton";
@@ -145,7 +145,9 @@
             // 
             // addSpetialitiesButton
             // 
-            this.addSpetialitiesButton.BackColor = System.Drawing.SystemColors.Control;
+            this.addSpetialitiesButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.addSpetialitiesButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.addSpetialitiesButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.addSpetialitiesButton.Location = new System.Drawing.Point(129, 129);
             this.addSpetialitiesButton.Name = "addSpetialitiesButton";
             this.addSpetialitiesButton.Padding = new System.Windows.Forms.Padding(2);
@@ -164,7 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.spetialitiesGridView.AutoGenerateColumns = false;
-            this.spetialitiesGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.spetialitiesGridView.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.spetialitiesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.spetialitiesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn});
@@ -174,6 +176,7 @@
             this.spetialitiesGridView.MultiSelect = false;
             this.spetialitiesGridView.Name = "spetialitiesGridView";
             this.spetialitiesGridView.ReadOnly = true;
+            this.spetialitiesGridView.RowHeadersVisible = false;
             this.spetialitiesGridView.RowHeadersWidth = 51;
             this.spetialitiesGridView.RowTemplate.Height = 24;
             this.spetialitiesGridView.Size = new System.Drawing.Size(250, 311);
@@ -183,10 +186,10 @@
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 280;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 200;
+            this.nameDataGridViewTextBoxColumn.Width = 280;
             // 
             // spetialityBindingSource
             // 
@@ -248,7 +251,7 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.DataGridView spetialitiesGridView;
         private System.Windows.Forms.BindingSource spetialityBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

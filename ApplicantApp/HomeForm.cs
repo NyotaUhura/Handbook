@@ -14,26 +14,26 @@ namespace ApplicantApp
     //Главное окно студента, которое отбражает список избранных.
     public partial class HomeForm : Form
     {
-        Directory directory;
-        Applicant CurrentApplicant;
-        public HomeForm(Applicant applicant)
+        public Directory Directory;
+        public Applicant CurrentApplicant;
+        public HomeForm(Directory directory, Applicant applicant)
         {
+            Directory = directory;
+            CurrentApplicant = applicant;
             InitializeComponent();
-            directory = new Directory();
-            directory.FillTestData(100);
 
-            this.CurrentApplicant = applicant;
+            Directory.FillTestData(100);
             universityBindingSource.DataSource = applicant.Favorites;
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            directory.Load();
+            Directory.Load();
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            directory.Save();
+            Directory.Save();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace ApplicantApp
                     e.Cancel = true;
                     break;
                 case DialogResult.Yes:
-                    directory.Save();
+                    Directory.Save();
                     break;
                 case DialogResult.No:
                     break;
@@ -62,8 +62,16 @@ namespace ApplicantApp
             var uf = new UniversitiesForm(CurrentApplicant.Favorites);
             if (uf.ShowDialog() == DialogResult.OK)
             {
-                CurrentApplicant.Favorites.Add(uf.currentUniversity);
-                universityBindingSource.ResetBindings(false);
+                //foreach (University university in CurrentApplicant.Favorites)
+                //{
+                //    if (uf.currentUniversity.Name == university.Name)
+                //        universityBindingSource.ResetBindings(false);
+                //    else
+                //    {
+                        CurrentApplicant.Favorites.Add(uf.currentUniversity);
+                        universityBindingSource.ResetBindings(false);
+                //    }
+                //}
             }
         }
 

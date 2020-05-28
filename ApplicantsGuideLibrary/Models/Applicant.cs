@@ -11,10 +11,6 @@ namespace ApplicantsGuide.Models
     public class Applicant :User
     {
         public List<University> Favorites = new List<University>();
-        public Applicant(string name, string password)
-        {
-            Name = name;
-            Password = password;
-        }
+        public Applicant(string name, string password) : base(name, password) { }
     }
 }

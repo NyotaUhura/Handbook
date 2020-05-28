@@ -89,6 +89,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdminApp\AdminApp.csproj">
+      <Project>{afdd113b-2985-455c-98f8-d1e53cca0a66}</Project>
+      <Name>AdminApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ApplicantApp\ApplicantApp.csproj">
+      <Project>{739ca79d-115d-44b8-b44b-5d8a1a69fdce}</Project>
+      <Name>ApplicantApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ApplicantsGuideLibrary\ApplicantsGuideLibrary.csproj">
       <Project>{8af0f847-6abb-4042-941d-5139e423bc27}</Project>
       <Name>ApplicantsGuideLibrary</Name>
