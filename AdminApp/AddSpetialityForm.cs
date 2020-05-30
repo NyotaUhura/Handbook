@@ -15,30 +15,36 @@ namespace AdminApp
     public partial class AddSpetialityForm : Form
     {
 
-        public Spetiality currentSpetiality { set; get; }
-        
+        public Spetiality CurrentSpetiality { set; get; }
         
         public AddSpetialityForm()
         {
             InitializeComponent();
+            CurrentSpetiality = new Spetiality();
         }
 
         private void AddSpetialityForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
-        }
+            if (nameBox.Text != string.Empty)
+            {
+                CurrentSpetiality.Name = nameBox.Text;
+                CurrentSpetiality.Price = priceBox.Value;
+                CurrentSpetiality.Contest = contestBox.Value;
+                CurrentSpetiality.StateFundedPlaces = stateFundedPlacesBox.Value;
+                CurrentSpetiality.DayPlaces = dayPlacesBox.Value;
+                CurrentSpetiality.СorrespondencePlaces = correspondancePlacesBox.Value;
+                CurrentSpetiality.Places = dayPlacesBox.Value + correspondancePlacesBox.Value;
+            }
+            else
+            {
+                MessageBox.Show("All fields are required.");
+                e.Cancel = true;
+            }
+}
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            currentSpetiality = new Spetiality
-            (
-                nameBox.Text,
-                priceBox.Value,
-                contestBox.Value,
-                stateFundedPlacesBox.Value,
-                dayPlacesBox.Value,
-                correspondancePlacesBox.Value
-            );
+            Close();
         }
     }
 }

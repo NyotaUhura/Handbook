@@ -15,12 +15,12 @@ namespace AdminApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMainForm(
-                new Directory(), 
-                new Admin("admin", "admin")
-                ));
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new AdminMainForm(
+            //    new Directory(),
+            //    new Admin("admin", "admin")
+            //    )) ;
         }
     }
 }

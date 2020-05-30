@@ -66,6 +66,9 @@ namespace ApplicantsGuide.Models
             ////Админ.
             
         }
+
+        
+
             //Сохранение и загрузка данных.
             public void Save()
             {

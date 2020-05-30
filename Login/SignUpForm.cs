@@ -14,9 +14,11 @@ namespace Login
     public partial class SignUpForm : Form
     {
         public Applicant CurrentApplicant { set; get; }
+        //public Directory Directory;
         public SignUpForm()
         {
             InitializeComponent();
+            //Directory = directory;
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -32,10 +34,18 @@ namespace Login
             {
                 if (passwordBox.Text == passwordBox2.Text)
                 {
-                    CurrentApplicant = new Applicant(
-                    nameBox.Text,
-                    passwordBox.Text
-                    );
+                    if (nameBox.Text == "admin")
+                    {
+                        MessageBox.Show("Please, change your name.");
+                        e.Cancel = true;
+                    }
+                    else
+                    {
+                        CurrentApplicant = new Applicant(
+                        nameBox.Text,
+                        passwordBox.Text
+                        );
+                    }
                 }
                 else
                 {
@@ -49,6 +59,12 @@ namespace Login
                 e.Cancel = true;
             }
 
+
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

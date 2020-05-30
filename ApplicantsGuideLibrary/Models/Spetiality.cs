@@ -23,6 +23,16 @@ namespace ApplicantsGuide.Models
             СorrespondencePlaces = correspondencePlaces;
             Places = correspondencePlaces + dayPlaces;
         }
+        public Spetiality()
+        {
+            Name = "";
+            Price = 0;
+            Contest = 0;
+            StateFundedPlaces = 0;
+            DayPlaces = 0;
+            СorrespondencePlaces = 0;
+            Places = 0;
+        }
         public string Name { set; get; }
         public decimal Price { set; get; }
         public decimal Contest { set; get; }

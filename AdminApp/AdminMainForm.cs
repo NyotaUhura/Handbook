@@ -22,7 +22,6 @@ namespace AdminApp
             CurrentAdmin = admin;
             InitializeComponent();
 
-            Directory.FillTestData(100);
             universityBindingSource.DataSource = directory.Universities;
         }
 
@@ -75,7 +74,7 @@ namespace AdminApp
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var toDel = universitiyList.SelectedItem as University;
+            var toDel = universityList.SelectedItem as University;
             var res = MessageBox.Show($"Delete {toDel.Name} ?", "Сonfirmation", MessageBoxButtons.YesNo);
             switch (res)
             {

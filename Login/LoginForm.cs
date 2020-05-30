@@ -19,7 +19,7 @@ namespace Login
     {
         public Directory Directory;
         public Admin Admin;
-        //public Applicant Applicant;
+        public Applicant Applicant;
 
         public loginForm()
         {
@@ -35,30 +35,25 @@ namespace Login
         private void signUp_Click(object sender, EventArgs e)
         {
             var suf = new SignUpForm();
-            if (suf.ShowDialog() == DialogResult.Yes)
+            if (suf.ShowDialog() == DialogResult.OK)
             {
                 Directory.Applicants.Add(suf.CurrentApplicant);
+                Directory.Save();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
         }
 
 
-        /////////////////////////////////////////////////////////////
         private void SignIn_Click(object sender, EventArgs e)
         {
-            //if (!CheckAdmin())
-            //    CheckApplicant();
-            var suf = new SignUpForm();
-            if (suf.ShowDialog() == DialogResult.OK)
-            {
-                Directory.Applicants.Add(suf.CurrentApplicant);
-            }
+            
         }
 
-        private bool CheckAdmin()
+        private void CheckAdmin()
         {
             if (nameBox.Text == Admin.Name && passwordBox.Text == Admin.Password)
             {
@@ -67,9 +62,7 @@ namespace Login
                 adminApp.ShowDialog();
                 
                 this.Close();
-                return true;
             }
-            return false;
         }
 
         private void CheckApplicant()
@@ -90,22 +83,24 @@ namespace Login
                             return;
                         }
                     }
-                    else MessageBox.Show("Wrong password. Try it again..");
+                    //else MessageBox.Show("Wrong password. Try it again.");
                 }
             }
-            MessageBox.Show("All fields are required.");
+            //MessageBox.Show("All fields are required.");
         }
+
+
 
         private void loginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Directory.Save();
+            Directory.Save();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
 
-            if (!CheckAdmin())
-                CheckApplicant();
+            CheckAdmin();
+            CheckApplicant();
         }
     }
 }

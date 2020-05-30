@@ -12,6 +12,12 @@ namespace ApplicantsGuide.Models
     [Serializable]
     public class University
     {
+        public University()
+        {
+            Adress = "";
+            Name = "";
+            Spetialities = new List<Spetiality>();
+        }
         public University(string adress, string name)
         {
             Adress = adress;

@@ -40,7 +40,7 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.universitiyList = new System.Windows.Forms.ListBox();
+            this.universityList = new System.Windows.Forms.ListBox();
             this.universityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.universities = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -69,7 +69,7 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 19);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loadToolStripMenuItem
@@ -126,29 +126,29 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gitHubToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 19);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // gitHubToolStripMenuItem
             // 
             this.gitHubToolStripMenuItem.Name = "gitHubToolStripMenuItem";
-            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gitHubToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.gitHubToolStripMenuItem.Text = "GitHub";
             // 
-            // universitiyList
+            // universityList
             // 
-            this.universitiyList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.universityList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.universitiyList.BackColor = System.Drawing.SystemColors.Window;
-            this.universitiyList.DataSource = this.universityBindingSource;
-            this.universitiyList.DisplayMember = "Name";
-            this.universitiyList.FormattingEnabled = true;
-            this.universitiyList.ItemHeight = 16;
-            this.universitiyList.Location = new System.Drawing.Point(34, 112);
-            this.universitiyList.Name = "universitiyList";
-            this.universitiyList.Size = new System.Drawing.Size(561, 308);
-            this.universitiyList.TabIndex = 1;
+            this.universityList.BackColor = System.Drawing.SystemColors.Window;
+            this.universityList.DataSource = this.universityBindingSource;
+            this.universityList.DisplayMember = "Name";
+            this.universityList.FormattingEnabled = true;
+            this.universityList.ItemHeight = 16;
+            this.universityList.Location = new System.Drawing.Point(34, 112);
+            this.universityList.Name = "universityList";
+            this.universityList.Size = new System.Drawing.Size(561, 308);
+            this.universityList.TabIndex = 1;
             // 
             // universityBindingSource
             // 
@@ -171,7 +171,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.universities);
-            this.Controls.Add(this.universitiyList);
+            this.Controls.Add(this.universityList);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(650, 500);
@@ -200,7 +200,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
        
-        private System.Windows.Forms.ListBox universitiyList;
+        private System.Windows.Forms.ListBox universityList;
         private System.Windows.Forms.BindingSource universityBindingSource;
         private System.Windows.Forms.ToolStripMenuItem gitHubToolStripMenuItem;
         private System.Windows.Forms.Label universities;

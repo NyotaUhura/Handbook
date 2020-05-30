@@ -18,13 +18,7 @@ namespace AdminApp
         public AddUniversityForm()
         {
             InitializeComponent();
-
-            CurrentUniversity = new University
-            (
-                adressBox.Text,
-                nameBox.Text
-            );
-
+            CurrentUniversity = new University();
             spetialityBindingSource.DataSource = CurrentUniversity.Spetialities;
         }
 
@@ -45,7 +39,16 @@ namespace AdminApp
 
         private void AddUniversityForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (nameBox.Text != string.Empty || adressBox.Text != string.Empty)
+            {
+                CurrentUniversity.Name = nameBox.Text;
+                CurrentUniversity.Adress = adressBox.Text;
+            }
+            else
+            {
+                MessageBox.Show("All fields are required.");
+                e.Cancel = true;
+            }
         }
 
         private void addSpetialitiesButton_Click(object sender, EventArgs e)
@@ -53,7 +56,7 @@ namespace AdminApp
             var asf = new AddSpetialityForm();
             if (asf.ShowDialog() == DialogResult.OK)
             {
-                CurrentUniversity.Spetialities.Add(asf.currentSpetiality);
+                CurrentUniversity.Spetialities.Add(asf.CurrentSpetiality);
                 spetialityBindingSource.ResetBindings(false);
             }
         }

@@ -22,7 +22,6 @@ namespace ApplicantApp
             CurrentApplicant = applicant;
             InitializeComponent();
 
-            Directory.FillTestData(100);
             universityBindingSource.DataSource = applicant.Favorites;
         }
 
@@ -61,19 +60,15 @@ namespace ApplicantApp
         {
             var uf = new UniversitiesForm(CurrentApplicant.Favorites);
             if (uf.ShowDialog() == DialogResult.OK)
-            {
-                //foreach (University university in CurrentApplicant.Favorites)
-                //{
-                //    if (uf.currentUniversity.Name == university.Name)
-                //        universityBindingSource.ResetBindings(false);
-                //    else
-                //    {
-                        CurrentApplicant.Favorites.Add(uf.currentUniversity);
+            { 
+
+                        CurrentApplicant.AddUniversity(uf.currentUniversity);
                         universityBindingSource.ResetBindings(false);
-                //    }
-                //}
+                    
             }
         }
+
+
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -84,6 +79,7 @@ namespace ApplicantApp
                 switch (res)
                 {
                     case DialogResult.Yes:
+                        //get un by ...
                         favoriteGridView.Rows.RemoveAt(this.favoriteGridView.SelectedRows[0].Index);
                         universityBindingSource.ResetBindings(false);
                         break;

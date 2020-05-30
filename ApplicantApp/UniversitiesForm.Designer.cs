@@ -45,6 +45,8 @@
             this.universitiesGridView.AllowUserToAddRows = false;
             this.universitiesGridView.AllowUserToDeleteRows = false;
             this.universitiesGridView.AllowUserToOrderColumns = true;
+            this.universitiesGridView.AllowUserToResizeColumns = false;
+            this.universitiesGridView.AllowUserToResizeRows = false;
             this.universitiesGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.universitiesGridView.AutoGenerateColumns = false;
@@ -68,20 +70,24 @@
             // 
             // adressDataGridViewTextBoxColumn
             // 
+            this.adressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.adressDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.adressDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.adressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.adressDataGridViewTextBoxColumn.MaxInputLength = 100;
+            this.adressDataGridViewTextBoxColumn.MinimumWidth = 125;
             this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
             this.adressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.adressDataGridViewTextBoxColumn.Width = 125;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Adress";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 300;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nameDataGridViewTextBoxColumn.Width = 300;
             // 
             // universityBindingSource

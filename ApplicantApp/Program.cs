@@ -20,7 +20,7 @@ namespace ApplicantApp
             Application.Run(new HomeForm(
                 new Directory(),
                 new Applicant("applicant", "applicant")
-                )) ;
+                ));
         }
     }
 }
