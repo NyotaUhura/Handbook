@@ -124,7 +124,7 @@
             this.MaximumSize = new System.Drawing.Size(420, 380);
             this.MinimumSize = new System.Drawing.Size(420, 380);
             this.Name = "loginForm";
-            this.Text = "LoginForm";
+            this.Text = "Sign In";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loginForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

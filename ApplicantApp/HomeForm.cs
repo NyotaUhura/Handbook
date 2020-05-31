@@ -21,7 +21,6 @@ namespace ApplicantApp
             Directory = directory;
             CurrentApplicant = applicant;
             InitializeComponent();
-
             universityBindingSource.DataSource = applicant.Favorites;
         }
 
@@ -58,10 +57,9 @@ namespace ApplicantApp
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var uf = new UniversitiesForm(CurrentApplicant.Favorites);
+            var uf = new UniversitiesForm(CurrentApplicant.Favorites, Directory);
             if (uf.ShowDialog() == DialogResult.OK)
             { 
-
                         CurrentApplicant.AddUniversity(uf.currentUniversity);
                         universityBindingSource.ResetBindings(false);
                     
@@ -92,6 +90,27 @@ namespace ApplicantApp
         private void favoriteList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void favoriteGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //    var uf = new Spetialities();
+            //    if (uf.ShowDialog() == DialogResult.OK)
+            //    {
+
+            //    }
+        }
+
+        private void favoriteGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var un = (University)universityBindingSource.Current;
+            var uf = new Spetialities(un);
+            this.Hide();
+            if (uf.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+                uf.Close();
+            }
         }
     }
 }

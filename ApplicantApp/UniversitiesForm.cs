@@ -14,14 +14,13 @@ namespace ApplicantApp
     //Форма добавления университета в список избранных.
     public partial class UniversitiesForm : Form
     {
-        Directory directory;
+        Directory Directory;
         List<University> favorites;
         public University currentUniversity;
-        public UniversitiesForm(List<University> universityList)
+        public UniversitiesForm(List<University> universityList, Directory directory)
         {
             InitializeComponent();
-            directory = new Directory();
-            directory.FillTestData(100);
+            Directory = directory;
 
             universityBindingSource.DataSource = directory.Universities;
             favorites = universityList;
@@ -30,18 +29,8 @@ namespace ApplicantApp
         private void UniversitiesForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             var un = (University)universityBindingSource.Current;
-            //foreach (University university in favorites)
-            //{
-            //    if (currentUniversity.Name == university.Name)
-            //        return;
-            //    else
-            //    {
                     currentUniversity = un;
-            //    }
-            //}
-
-
-
+            
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -50,14 +39,6 @@ namespace ApplicantApp
             
         }
 
-        private void universitiesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void universitiesGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-        }
+        
     }
 }

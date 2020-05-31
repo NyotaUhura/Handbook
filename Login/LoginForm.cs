@@ -34,12 +34,10 @@ namespace Login
 
         private void signUp_Click(object sender, EventArgs e)
         {
-            var suf = new SignUpForm();
-            if (suf.ShowDialog() == DialogResult.OK)
-            {
-                Directory.Applicants.Add(suf.CurrentApplicant);
-                Directory.Save();
-            }
+            var suf = new SignUpForm(Directory);
+            suf.Show();
+                //Directory.Applicants.Add(suf.CurrentApplicant);
+                //Directory.Save();
         }
 
         private void button1_Click(object sender, EventArgs e)

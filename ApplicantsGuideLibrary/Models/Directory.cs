@@ -62,9 +62,6 @@ namespace ApplicantsGuide.Models
             {
                 Applicants.Add(new Applicant ( $"Applicant{i}", "123" ));
             }
-
-            ////Админ.
-            
         }
 
         

@@ -46,7 +46,7 @@ namespace AdminApp
             }
             else
             {
-                MessageBox.Show("All fields are required.");
+                MessageBox.Show("Name is required.");
                 e.Cancel = true;
             }
         }

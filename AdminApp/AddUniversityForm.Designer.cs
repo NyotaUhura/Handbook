@@ -41,9 +41,9 @@
             this.addSpetialitiesButton = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.spetialitiesGridView = new System.Windows.Forms.DataGridView();
+            this.image = new System.Windows.Forms.Label();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spetialityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.image = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialitiesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).BeginInit();
@@ -182,6 +182,16 @@
             this.spetialitiesGridView.Size = new System.Drawing.Size(250, 311);
             this.spetialitiesGridView.TabIndex = 11;
             // 
+            // image
+            // 
+            this.image.AutoSize = true;
+            this.image.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.image.Location = new System.Drawing.Point(38, 181);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(51, 17);
+            this.image.TabIndex = 12;
+            this.image.Text = "Image";
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -194,16 +204,6 @@
             // spetialityBindingSource
             // 
             this.spetialityBindingSource.DataSource = typeof(ApplicantsGuide.Models.Spetiality);
-            // 
-            // image
-            // 
-            this.image.AutoSize = true;
-            this.image.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.image.Location = new System.Drawing.Point(38, 181);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(51, 17);
-            this.image.TabIndex = 12;
-            this.image.Text = "Image";
             // 
             // AddUniversityForm
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.nameBox);
             this.MinimumSize = new System.Drawing.Size(600, 555);
             this.Name = "AddUniversityForm";
-            this.Text = "AddUniversityForm";
+            this.Text = "Add University";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddUniversityForm_FormClosing);
             this.Load += new System.EventHandler(this.AddUniversityForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

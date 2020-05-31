@@ -235,7 +235,7 @@
             this.Controls.Add(this.name);
             this.MinimumSize = new System.Drawing.Size(600, 420);
             this.Name = "AddSpetialityForm";
-            this.Text = "AddSpetialityForm";
+            this.Text = "Add Spetiality";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddSpetialityForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.priceBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contestBox)).EndInit();

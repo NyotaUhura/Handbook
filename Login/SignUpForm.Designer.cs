@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.okButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.passwordBox2 = new System.Windows.Forms.TextBox();
@@ -45,7 +44,7 @@
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.okButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(29, 283);
+            this.okButton.Location = new System.Drawing.Point(132, 293);
             this.okButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(88, 32);
@@ -53,20 +52,6 @@
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(261, 283);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(84, 32);
-            this.cancelButton.TabIndex = 1;
-            this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // nameBox
             // 
@@ -159,13 +144,12 @@
             this.Controls.Add(this.passwordBox2);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.nameBox);
-            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(394, 383);
             this.MinimumSize = new System.Drawing.Size(394, 383);
             this.Name = "SignUpForm";
-            this.Text = "SignUpForm";
+            this.Text = "Sign Up";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,7 +159,6 @@
         #endregion
 
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox passwordBox2;

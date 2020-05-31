@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Spetialities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spetialities.Designer.cs">
+      <DependentUpon>Spetialities.cs</DependentUpon>
+    </Compile>
     <Compile Include="UniversitiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Spetialities.resx">
+      <DependentUpon>Spetialities.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UniversitiesForm.resx">
       <DependentUpon>UniversitiesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +84,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\ApplicantsGuide.Models.Spetiality.datasource" />
     <None Include="Properties\DataSources\ApplicantsGuide.Models.University.datasource" />
     <None Include="Properties\DataSources\UniversitiesForm.datasource" />
     <None Include="Properties\Settings.settings">
