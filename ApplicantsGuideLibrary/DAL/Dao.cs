@@ -13,7 +13,7 @@ namespace ApplicantsGuide.DAL
     class Dao
     {
         Directory directory;
-        const string filePath = "store.bin";
+        const string filePath = "directory.bin";
 
         public Dao(Directory directory)
         {
