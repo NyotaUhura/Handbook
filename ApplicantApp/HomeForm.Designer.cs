@@ -61,7 +61,7 @@
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(632, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(632, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,7 +73,7 @@
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loadToolStripMenuItem
@@ -109,7 +109,7 @@
             this.addToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.favoriteToolStripMenuItem.Name = "favoriteToolStripMenuItem";
-            this.favoriteToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.favoriteToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.favoriteToolStripMenuItem.Text = "Favorite";
             // 
             // addToolStripMenuItem
@@ -131,14 +131,14 @@
             this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gitHubToolStripMenuItem1});
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem1.Text = "Help";
             // 
             // gitHubToolStripMenuItem1
             // 
             this.gitHubToolStripMenuItem1.Name = "gitHubToolStripMenuItem1";
-            this.gitHubToolStripMenuItem1.Size = new System.Drawing.Size(139, 26);
-            this.gitHubToolStripMenuItem1.Text = "GitHub";
+            this.gitHubToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.gitHubToolStripMenuItem1.Text = "ApplicantsGuide 1.0";
             // 
             // label1
             // 

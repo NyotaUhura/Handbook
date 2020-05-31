@@ -57,11 +57,6 @@ namespace AdminApp
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var auf = new AddUniversityForm();

@@ -33,7 +33,6 @@
             this.name = new System.Windows.Forms.Label();
             this.adress = new System.Windows.Forms.Label();
             this.adressBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.spetialities = new System.Windows.Forms.Label();
@@ -41,10 +40,8 @@
             this.addSpetialitiesButton = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.spetialitiesGridView = new System.Windows.Forms.DataGridView();
-            this.image = new System.Windows.Forms.Label();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spetialityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialitiesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -89,24 +86,13 @@
             this.adressBox.Size = new System.Drawing.Size(434, 22);
             this.adressBox.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 222);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 207);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.okButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
-            this.okButton.Location = new System.Drawing.Point(38, 458);
+            this.okButton.Location = new System.Drawing.Point(38, 353);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(101, 28);
             this.okButton.TabIndex = 6;
@@ -118,7 +104,7 @@
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(435, 458);
+            this.cancelButton.Location = new System.Drawing.Point(435, 353);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(101, 28);
             this.cancelButton.TabIndex = 7;
@@ -148,7 +134,7 @@
             this.addSpetialitiesButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.addSpetialitiesButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.addSpetialitiesButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addSpetialitiesButton.Location = new System.Drawing.Point(129, 129);
+            this.addSpetialitiesButton.Location = new System.Drawing.Point(142, 129);
             this.addSpetialitiesButton.Name = "addSpetialitiesButton";
             this.addSpetialitiesButton.Padding = new System.Windows.Forms.Padding(2);
             this.addSpetialitiesButton.Size = new System.Drawing.Size(135, 28);
@@ -172,25 +158,15 @@
             this.nameDataGridViewTextBoxColumn});
             this.spetialitiesGridView.DataSource = this.spetialityBindingSource;
             this.spetialitiesGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.spetialitiesGridView.Location = new System.Drawing.Point(300, 129);
+            this.spetialitiesGridView.Location = new System.Drawing.Point(299, 129);
             this.spetialitiesGridView.MultiSelect = false;
             this.spetialitiesGridView.Name = "spetialitiesGridView";
             this.spetialitiesGridView.ReadOnly = true;
             this.spetialitiesGridView.RowHeadersVisible = false;
             this.spetialitiesGridView.RowHeadersWidth = 51;
             this.spetialitiesGridView.RowTemplate.Height = 24;
-            this.spetialitiesGridView.Size = new System.Drawing.Size(250, 311);
+            this.spetialitiesGridView.Size = new System.Drawing.Size(251, 203);
             this.spetialitiesGridView.TabIndex = 11;
-            // 
-            // image
-            // 
-            this.image.AutoSize = true;
-            this.image.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.image.Location = new System.Drawing.Point(38, 181);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(51, 17);
-            this.image.TabIndex = 12;
-            this.image.Text = "Image";
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -210,25 +186,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(582, 508);
-            this.Controls.Add(this.image);
+            this.ClientSize = new System.Drawing.Size(582, 403);
             this.Controls.Add(this.spetialitiesGridView);
             this.Controls.Add(this.addSpetialitiesButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.spetialities);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.adress);
             this.Controls.Add(this.adressBox);
             this.Controls.Add(this.name);
             this.Controls.Add(this.nameBox);
-            this.MinimumSize = new System.Drawing.Size(600, 555);
+            this.MinimumSize = new System.Drawing.Size(600, 450);
             this.Name = "AddUniversityForm";
             this.Text = "Add University";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddUniversityForm_FormClosing);
             this.Load += new System.EventHandler(this.AddUniversityForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialitiesGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -242,7 +215,6 @@
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label adress;
         private System.Windows.Forms.TextBox adressBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label spetialities;
@@ -251,7 +223,6 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.DataGridView spetialitiesGridView;
         private System.Windows.Forms.BindingSource spetialityBindingSource;
-        private System.Windows.Forms.Label image;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

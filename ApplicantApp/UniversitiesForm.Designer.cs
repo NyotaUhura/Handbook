@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.universitiesGridView = new System.Windows.Forms.DataGridView();
-            this.universities = new System.Windows.Forms.Label();
-            this.okButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.adressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.universityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.universities = new System.Windows.Forms.Label();
+            this.okButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.universitiesGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.universityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.universitiesGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.universitiesGridView.AutoGenerateColumns = false;
+            this.universitiesGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.universitiesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.universitiesGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.adressDataGridViewTextBoxColumn,
@@ -65,6 +66,32 @@
             this.universitiesGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.universitiesGridView.Size = new System.Drawing.Size(428, 354);
             this.universitiesGridView.TabIndex = 0;
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            this.adressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.adressDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.adressDataGridViewTextBoxColumn.MaxInputLength = 100;
+            this.adressDataGridViewTextBoxColumn.MinimumWidth = 125;
+            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.adressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.adressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Adress";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 300;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nameDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // universityBindingSource
+            // 
+            this.universityBindingSource.DataSource = typeof(ApplicantsGuide.Models.University);
             // 
             // universities
             // 
@@ -102,32 +129,6 @@
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            this.adressDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.adressDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.adressDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.adressDataGridViewTextBoxColumn.MaxInputLength = 100;
-            this.adressDataGridViewTextBoxColumn.MinimumWidth = 125;
-            this.adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            this.adressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adressDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.adressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Adress";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 300;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nameDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // universityBindingSource
-            // 
-            this.universityBindingSource.DataSource = typeof(ApplicantsGuide.Models.University);
             // 
             // UniversitiesForm
             // 

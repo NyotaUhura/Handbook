@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.spetialityGridView = new System.Windows.Forms.DataGridView();
-            this.spetialityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.okButton = new System.Windows.Forms.Button();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contestDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +37,9 @@
             this.dayPlacesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.сorrespondencePlacesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.spetialityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.okButton = new System.Windows.Forms.Button();
+            this.spetialitiesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -64,30 +65,15 @@
             this.сorrespondencePlacesDataGridViewTextBoxColumn,
             this.placesDataGridViewTextBoxColumn});
             this.spetialityGridView.DataSource = this.spetialityBindingSource;
-            this.spetialityGridView.Location = new System.Drawing.Point(21, 37);
+            this.spetialityGridView.Location = new System.Drawing.Point(27, 84);
             this.spetialityGridView.Name = "spetialityGridView";
             this.spetialityGridView.ReadOnly = true;
             this.spetialityGridView.RowHeadersVisible = false;
             this.spetialityGridView.RowHeadersWidth = 51;
             this.spetialityGridView.RowTemplate.Height = 24;
-            this.spetialityGridView.Size = new System.Drawing.Size(838, 348);
+            this.spetialityGridView.Size = new System.Drawing.Size(816, 355);
             this.spetialityGridView.TabIndex = 0;
             this.spetialityGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.spetialityGridView_CellContentClick);
-            // 
-            // spetialityBindingSource
-            // 
-            this.spetialityBindingSource.DataSource = typeof(ApplicantsGuide.Models.Spetiality);
-            // 
-            // okButton
-            // 
-            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.okButton.Location = new System.Drawing.Point(876, 407);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 1;
-            this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -153,19 +139,48 @@
             this.placesDataGridViewTextBoxColumn.ReadOnly = true;
             this.placesDataGridViewTextBoxColumn.Width = 79;
             // 
+            // spetialityBindingSource
+            // 
+            this.spetialityBindingSource.DataSource = typeof(ApplicantsGuide.Models.Spetiality);
+            // 
+            // okButton
+            // 
+            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.okButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.okButton.Location = new System.Drawing.Point(775, 465);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(76, 26);
+            this.okButton.TabIndex = 1;
+            this.okButton.Text = "OK";
+            this.okButton.UseVisualStyleBackColor = false;
+            // 
+            // spetialitiesLabel
+            // 
+            this.spetialitiesLabel.AutoSize = true;
+            this.spetialitiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.spetialitiesLabel.Location = new System.Drawing.Point(22, 30);
+            this.spetialitiesLabel.Name = "spetialitiesLabel";
+            this.spetialitiesLabel.Size = new System.Drawing.Size(144, 29);
+            this.spetialitiesLabel.TabIndex = 2;
+            this.spetialitiesLabel.Text = "Spetialities";
+            // 
             // Spetialities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(982, 442);
+            this.ClientSize = new System.Drawing.Size(882, 503);
+            this.Controls.Add(this.spetialitiesLabel);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.spetialityGridView);
+            this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "Spetialities";
             this.Text = "Spetialities";
             ((System.ComponentModel.ISupportInitialize)(this.spetialityGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spetialityBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -181,5 +196,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dayPlacesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn сorrespondencePlacesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn placesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label spetialitiesLabel;
     }
 }
